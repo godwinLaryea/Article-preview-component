@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(205, 44%, 93%);
+  font-size: .8125rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  width: min(95%, 21.875rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+.image {
+  margin-bottom: 1rem;
+}
+
+.image>img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+
+.mid-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.furniture-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-inline: 1rem;
+
+  h1 {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: hsl(214, 17%, 51%);
+  }
+}
+
+.author-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pop-up-mobile {
+  display: none;
+  align-items: center;
+  gap: .5rem;
+}
+
+#share-text {
+  text-transform: uppercase;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons>img {
+  width: 20px;
+  height: 20px;
+}
+
+.author-profile-image {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.author-profile-image>img {
+  max-width: 20%;
+  border-radius: 50%;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.name {
+  color: hsl(217, 19%, 35%);
+  font-weight: bold;
+}
+
+.date {
+  color: hsl(214, 17%, 51%);
+}
+
+
+.share-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.share-image {
+  max-width: 100%;
+  border-radius: 50%;
+  padding: .25rem;
+}
+
+.pop-up-desktop {
+  align-items: center;
+  background-color: hsl(217, 19%, 35%);
+  display: none;
+}
+
+
+@media screen and (min-width: 40rem) {
+  .wrapper {
+    width: min(95%, 45.625rem);
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+  }
+
+  .image {
+    margin-bottom: 0;
+  }
+
+  .image>img {
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .mid-section {
+    justify-content: space-evenly;
+  }
+
+  .share-button {
+    position: relative;
+    right: 2rem;
+  }
+
+  .share-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pop-up-desktop {
+    display: none;
+    gap: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: -3rem;
+    right: -6rem;
+  }
+
+  #share-text-lg{
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
